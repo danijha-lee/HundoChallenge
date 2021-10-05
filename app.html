@@ -3,7 +3,7 @@
 
 <head>
 
-    <Title>APP NAME | The App </Title>
+    <Title>Hudo | The App </Title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -61,15 +61,38 @@
 
     <!-- Main Section -->
     <main id="content" class="flex-shrink-0">
+        <div class="container col-xxl-8 px-4 py-5 mt-5">
+            <div class="row row-cols-1">
+                <div class="col col-md-6">
+                    <h1>REWIND: A Coding Project</h1>
+                    <p>This project reverses a string using a decremented for loop.</p>
+                </div>
+                <div class="col col-md-6">
+                    <h5 class="border-bottom border-danger">Enter a string to reverse</h5>
+                    <form class="row gx-3 gy-2">
+                        <div class="col-6">
+                            <input id="startValue" type="text" class="form-control" required
+                                placeholder="Enter a number" />
+                        </div>
+                        <div class="col-6">
+                            <input id="endValue" type="text" class="form-control" required
+                                placeholder="Enter a number greater than previous" />
+                        </div>
+                        <div class="col-12">
+                            <button type="button" id="submitBtn" class="btn btn-danger">Display!</button>
+                        </div>
+                    </form>
+                    <hr />
+                    <table class="table table-striped">
+                        <tbody id="output">
 
-        <div class="container">
-            <h1>App UI Goes Here</h1>
-            <form>
-                <input id="message" type="text" placeholder="Enter a Message" required>
-                <button id="BtnSubmit" type="button" class="btn btn-dark">Display Message</button>
-                <button id="BtnSubmit2" type="button" class="btn btn-dark">Alert Me-Swal!</button>
-            </form>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
+
 
 
     </main>
@@ -118,8 +141,7 @@
 
 
     <script>
-        document.getElementById("BtnSubmit").addEventListener("click", displayMessage);
-        document.getElementById("BtnSubmit2").addEventListener("click", displayMessage2);
+        document.getElementById("submitBtn").addEventListener("click", getNumbers);
     </script>
 
 </body>
