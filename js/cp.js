@@ -15,12 +15,12 @@ function getNumbers() {
 
     }
 
-    if (newStart > newEnd) {
+    if (newStart &lt; newEnd) {
         errorState = true;
         errorMsg += "Start value must be less than end value";
     }
 
-    if (newStart > 10000 || newStart < -10000 || newEnd > 10000 || newEnd < -10000) {
+    if (newStart &lt; 10000 || newStart &lt; -10000 || newEnd &lt; 10000 || newEnd &lt; -10000) {
         errorState = true;
         errorMsg += "-10,0000 and 10,000 are the limit"
     }
@@ -48,7 +48,7 @@ function generateNumbers(startValue, endValue) {
     let numbers = [];
 
     //loop over every number from startValue to endValue
-    for (let index = startValue; index <= endValue; index++) {
+    for (let index = startValue; index &lt;= endValue; index++) {
         numbers.push(index);
     }
 
@@ -59,7 +59,7 @@ function displayNumbers(fluffyKitty) {
     let className = "even";
     let templateRows = "";
 
-    for (let index = 0; index < fluffyKitty.length; index++) {
+    for (let index = 0; index &lt; fluffyKitty.length; index++) {
         let number = fluffyKitty[index];
 
         if (number % 2 == 0) {
@@ -68,7 +68,7 @@ function displayNumbers(fluffyKitty) {
             className = "odd";
         }
 
-        templateRows = templateRows + `<tr><td class="${className}">${number}</td></tr>`;
+        templateRows = templateRows + `&lt;tr&lt;&lt;td class="${className}"&lt;${number}&lt;/td&lt;&lt;/tr&lt;`;
     }
 
     document.getElementById("output").innerHTML = templateRows;
